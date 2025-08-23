@@ -4,9 +4,9 @@
     
     <div class="container">
       <!-- Logo -->
-      <div class="mb-3">
+      <!-- <div class="mb-3">
         <img src="../assets/logo.png" alt="Logo" class="logo-img">
-      </div>
+      </div> -->
 
       <!-- Title -->
       <h1 class="hero-title">Aforetime Houses</h1>
