@@ -1,0 +1,61 @@
+<template>
+  <div class="home">
+        <navbar></navbar>
+        <HomeCarousel></HomeCarousel>
+        <div class="col-sm-12 col-lg-12 col-md-12">
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/><div>
+                fsdfsdfsdf
+            </div>
+            <br/><div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+            <div>
+                fsdfsdfsdf
+            </div>
+            <br/>
+        </div>
+  </div>
+</template>
+<script setup>
+import HomeCarousel from '../Components/Home/HomeCarousel.vue';
+</script>

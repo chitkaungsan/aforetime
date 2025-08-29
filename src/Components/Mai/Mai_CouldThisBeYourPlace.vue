@@ -15,7 +15,7 @@
               <!-- Title + Icon Row -->
               <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2 class="h4  card-title mb-0">Beach House</h2>
-                <img src="../assets/Logo/Mai_beachouse.svg" alt="Beach House" class="img-fluid" style="width: 20%; height: 20%;">
+                <img src="../../assets/Logo/Mai_beachouse.svg" alt="Beach House" class="img-fluid" style="width: 20%; height: 20%;">
 
               </div>
 
@@ -36,7 +36,7 @@
 
               <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2 class="h4 card-title mb-0">Harmony</h2>
-                 <img src="../assets/Logo/Mai_heart.svg" alt="Beach House" class="img-fluid" style="width: 15%; height: 15%;">
+                 <img src="../../assets/Logo/Mai_heart.svg" alt="Beach House" class="img-fluid" style="width: 15%; height: 15%;">
               </div>
 
               <p class="text-light small mb-3 card-content">
@@ -56,7 +56,7 @@
 
               <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2 class="h4 card-title mb-0">Connect</h2>
-                <img src="../assets/Logo/Mai_coffee.svg" alt="Beach House" class="img-fluid" style="width: 15%; height: 15%;">
+                <img src="../../assets/Logo/Mai_coffee.svg" alt="Beach House" class="img-fluid" style="width: 15%; height: 15%;">
               </div>
 
               <p class="text-light small mb-3 card-content text-wrap">

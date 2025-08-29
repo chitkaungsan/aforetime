@@ -3,7 +3,7 @@
     <div class="container-fluid text-center">
       <!-- Shell Icon -->
       <div class="shell-icon mt-5">
-        <img src="../assets/Logo/shell.svg" alt="Shell Icon" class="shell-svg" style="width: 100px;height: 199px;" >
+        <img src="../../assets/Logo/shell.svg" alt="Shell Icon" class="shell-svg" style="width: 100px;height: 199px;" >
       </div>
 
       <!-- Main Title -->
@@ -27,17 +27,17 @@
           <div class="row p-5 mt-5 "  style="border-radius: 10px;">
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="image-card-mai-room">
-                <img src="../assets/Logo/p1.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
+                <img src="../../assets/Logo/p1.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
             </div>
         </div>
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="image-card-mai-room">
-                <img src="../assets/Logo/p2.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
+                <img src="../../assets/Logo/p2.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
             </div>
         </div>
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="image-card-mai-room">
-                <img src="../assets/Logo/p3.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
+                <img src="../../assets/Logo/p3.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
             </div>
         </div>
     </div>
@@ -50,17 +50,17 @@
           <div class="row p-5 mt-5 "  style="border-radius: 10px;">
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="image-card-mai-room">
-                <img src="../assets/Logo/p1.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
+                <img src="../../assets/Logo/p1.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
             </div>
         </div>
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="image-card-mai-room">
-                <img src="../assets/Logo/p2.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
+                <img src="../../assets/Logo/p2.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
             </div>
         </div>
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="image-card-mai-room">
-                <img src="../assets/Logo/p3.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
+                <img src="../../assets/Logo/p3.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
             </div>
         </div>
     </div>
@@ -72,17 +72,17 @@
           <div class="row p-5 mt-5 "  style="border-radius: 10px;">
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="image-card-mai-room">
-                <img src="../assets/Logo/p1.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
+                <img src="../../assets/Logo/p1.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
             </div>
         </div>
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="image-card-mai-room">
-                <img src="../assets/Logo/p2.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
+                <img src="../../assets/Logo/p2.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
             </div>
         </div>
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="image-card-mai-room">
-                <img src="../assets/Logo/p3.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
+                <img src="../../assets/Logo/p3.jpg" alt="Mai Place" class="img-fluid mai-rooms" />
             </div>
         </div>
     </div>
