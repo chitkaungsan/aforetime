@@ -1,10 +1,16 @@
 <template>
-  <nav class="navbar navbar-expand-lg sticky-top transparent-blur">
+  <nav class="navbar navbar-expand-lg sticky-top transparent-blur sticky">
     <div class="container-fluid">
       <!-- Left: Logo -->
-      <a class="navbar-brand fw-bold brand-logo" href="#">
-        <img :src="currentLogo" alt="Logo" class="logo" style="width: 120px; height: auto;">
+      <a class="navbar-brand fw-bold brand-logo sticky-top" href="#" v-if="pathValue ==='aforetime'">
+        <img :src="currentLogo" alt="Logo" class="logo sticky-top" style="width: 120px; height: auto;" >
+
       </a>
+      <a class="navbar-brand-mai fw-bold brand-logo sticky-top" href="#"  v-if="pathValue !=='mai-place'" >
+        <img :src="currentLogo" alt="Logo" class="logo-mai sticky-top" style="width: 160px; height: auto;" >
+      </a>
+
+      
       
       <!-- Mobile toggle button -->
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,18 +52,20 @@
 
 
 <script setup>
-import { computed } from "vue";
+import { computed,ref } from "vue";
 import { useRoute } from "vue-router";
 
 import aforetime_logo from "../assets/Logo/aforetime_crop.png";
 import maiplace_logo from "../assets/Logo/mai_logo_circle.png";
 
 const route = useRoute();
-
+const pathValue = ref("");
 const currentLogo = computed(() => {
   if (route.path === "/") {
+    pathValue.value = "aforetime"
     return aforetime_logo;
   } else if (route.path.startsWith("/mai-place")) {
+    pathValue.value = "aforetime"
     return maiplace_logo;
   } else {
     return aforetime_logo; // default logo
@@ -267,4 +275,45 @@ const currentTitle = computed(() => {
 .navbar {
   animation: fadeInUp 0.6s ease;
 }
+
+.logo-mai  {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 5px;
+
+  position: fixed;     /* instead of absolute */
+  top: 10px;           /* distance from top */
+  z-index: 1100;            /* above navbar */
+}
+
+/* Adjust brand anchor so it doesn’t break layout */
+.navbar-brand-mai {
+  position: relative;
+  padding-top: 30px; /* space so navbar doesn't overlap logo */
+  
+}
+
+.logo{
+ width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  position: fixed;     /* instead of absolute */
+  top: 10px;           /* distance from top */
+  left: 20px;          /* stick to the left side */
+  z-index: 1100;                   /* above navbar */
+}
+
+/* Adjust brand anchor so it doesn’t break layout */
+.navbar-brand {
+  position: relative;
+  padding-top: 30px; /* space so navbar doesn't overlap logo */
+}
+
 </style>

@@ -5,6 +5,9 @@
     <div class="overlay"></div> <!-- Soft overlay on background -->
 
     <div class="container position-relative">
+           <div class="mb-3">
+        <img :src="logo" alt="Logo" class="logo-img" style="width: 120px;">
+      </div>
       <!-- Title -->
       <h1 class="hero-title">Aforetime Houses</h1>
       <p class="hero-subtitle">Find your peace (or something like that)</p>
@@ -29,7 +32,11 @@
     </div>
   </section>
 </template>
+<script setup>
+import aforetime_logo from "../../assets/Logo/aforetime_crop.png";
 
+const logo = aforetime_logo
+</script>
 <style scoped>
 .hero-section {
   position: relative;
@@ -133,5 +140,38 @@ background-image: radial-gradient(
 }
 @media (max-width: 480px) {
   .hero-title { font-size: 32px; }
+}
+.btn-orange {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-orange::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%; /* start outside */
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shimmer 2s infinite; /* ⏱ runs every 2 seconds */
+}
+
+@keyframes shimmer {
+  0% {
+    left: -75%;
+  }
+  50% {
+    left: 125%; /* move across button */
+  }
+  100% {
+    left: 125%; /* stay off screen until next cycle */
+  }
 }
 </style>

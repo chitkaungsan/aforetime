@@ -4,9 +4,9 @@
     
     <div class="container">
       <!-- Logo -->
-      <!-- <div class="mb-3">
-        <img src="../assets/logo.png" alt="Logo" class="logo-img">
-      </div> -->
+      <div class="mb-3">
+        <img :src="logo" alt="Logo" class="logo-img" style="width: 120px;">
+      </div>
 
       <!-- Title -->
       <h1 class="hero-title">Aforetime Houses</h1>
@@ -32,7 +32,11 @@
     </div>
   </section>
 </template>
+<script setup>
+import aforetime_logo from "../assets/Logo/aforetime_crop.png";
 
+const logo = aforetime_logo
+</script>
 <style scoped>
 .hero-section {
   min-height: 100vh;
@@ -175,6 +179,39 @@
   }
   .contact-info {
     font-size: 0.8rem;
+  }
+}
+.btn-orange {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-orange::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%; /* start outside */
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shimmer 2s infinite; /* ⏱ runs every 2 seconds */
+}
+
+@keyframes shimmer {
+  0% {
+    left: -75%;
+  }
+  50% {
+    left: 125%; /* move across button */
+  }
+  100% {
+    left: 125%; /* stay off screen until next cycle */
   }
 }
 </style>
