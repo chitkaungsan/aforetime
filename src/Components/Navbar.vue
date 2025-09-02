@@ -1,39 +1,37 @@
 <template>
   <nav class="navbar navbar-expand-lg sticky-top transparent-blur sticky">
     <div class="container-fluid">
-      <!-- Left: Logo -->
-      <a class="navbar-brand fw-bold brand-logo sticky-top" href="#" v-if="pathValue ==='aforetime'">
-        <img :src="currentLogo" alt="Logo" class="logo sticky-top" style="width: 120px; height: auto;" >
 
-      </a>
-      <a class="navbar-brand-mai fw-bold brand-logo sticky-top" href="#"  v-if="pathValue !=='mai-place'" >
-        <img :src="currentLogo" alt="Logo" class="logo-mai sticky-top" style="width: 160px; height: auto;" >
+      <!-- Logo: dynamically changes -->
+      <a class="navbar-brand sticky-top" href="#">
+        <img
+          :src="currentLogo"
+          :class="logoClass"
+          alt="Logo"
+          style="height: auto;"
+        >
       </a>
 
-      
-      
       <!-- Mobile toggle button -->
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <!-- Center: Main heading -->
       <div class="navbar-center d-none d-lg-block">
-        <h4 class="main-heading mb-0">{{currentTitle}}</h4>
+        <h4 class="main-heading mb-0">{{ currentTitle }}</h4>
       </div>
-      
+
       <!-- Right: Navigation menu -->
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav">
-          <!-- Houses dropdown -->
-          <li class="nav-item"><router-link class="nav-link" to="/">HOME</router-link></li>
-           
+          <li class="nav-item"><router-link class="nav-link" to="/aforetime">HOME</router-link></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               HOUSES
             </a>
             <ul class="dropdown-menu custom-dropdown">
-              <li><router-link class="dropdown-item" to="/mai-place">Mai Place</router-link ></li>
+              <li><router-link class="dropdown-item" to="/aforetime/mai-place">Mai Place</router-link></li>
               <li><a class="dropdown-item" href="#">Jungle Hut</a></li>
               <li><a class="dropdown-item" href="#">Blooming Village</a></li>
               <li><a class="dropdown-item" href="#">Tribe</a></li>
@@ -46,42 +44,39 @@
           <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
         </ul>
       </div>
+
     </div>
   </nav>
 </template>
-
-
 <script setup>
-import { computed,ref } from "vue";
+import { computed } from "vue";
 import { useRoute } from "vue-router";
 
 import aforetime_logo from "../assets/Logo/aforetime_crop.png";
 import maiplace_logo from "../assets/Logo/mai_logo_circle.png";
 
 const route = useRoute();
-const pathValue = ref("");
+
+// Dynamic logo
 const currentLogo = computed(() => {
-  if (route.path === "/") {
-    pathValue.value = "aforetime"
-    return aforetime_logo;
-  } else if (route.path.startsWith("/mai-place")) {
-    pathValue.value = "aforetime"
-    return maiplace_logo;
-  } else {
-    return aforetime_logo; // default logo
-  }
+  if (route.path === "/aforetime") return aforetime_logo;
+  if (route.path === "/aforetime/mai-place") return maiplace_logo;
+  return aforetime_logo; // default
 });
 
+// Dynamic logo class (size or style)
+const logoClass = computed(() => {
+  return route.path === "/aforetime/mai-place" ? "logo-mai" : "logo";
+});
+
+// Dynamic title
 const currentTitle = computed(() => {
-  if (route.path === "/") {
-    return "AForetime Residents";
-  } else if (route.path.startsWith("/mai-place")) {
-    return "Mai Place";
-  } else {
-    return "AForetime Residents";
-  }
+  if (route.path === "/") return "AForetime Residents";
+  if (route.path.startsWith("/aforetime/mai-place")) return "Mai Place";
+  return "AForetime Residents";
 });
 </script>
+
 <style scoped>
 /* Transparent blur navbar */
 .transparent-blur {
@@ -277,8 +272,8 @@ const currentTitle = computed(() => {
 }
 
 .logo-mai  {
-  width: 80px;
-  height: 80px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   padding: 5px;

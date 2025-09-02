@@ -3,12 +3,12 @@ import MaiPlace from '@/Houses/MaiPlace.vue'
 import Home from '@/Pages/Home.vue'
 const routes = [
   {
-    path: '/',
+    path: '/aforetime',
     name: '/home',
     component: Home
   },
   {
-    path: '/mai-place',
+    path: '/aforetime/mai-place',
     name: 'MaiPlace',
     component: MaiPlace
   }
