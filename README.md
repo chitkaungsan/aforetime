@@ -1,29 +1,14 @@
-# AForeTime
+**AForetime Beach House — Demo Project**
 
-This template should help get you started developing with Vue 3 in Vite.
+AForetime Beach House is a demonstration project built to showcase my web development skills for a hospitality-style website.
+This project focuses on clean structure, practical features, and real-world use cases.
 
-## Recommended IDE Setup
+The goal of this project is to demonstrate:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Frontend show 
 
-## Customize configuration
+Clear project structure
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+UI for a beach house / villa website
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+This project was created as a demo only and was not selected for production due to non-technical business reasons.
